@@ -1,0 +1,158 @@
+html, body {
+    margin: 0 ;
+    padding: 0 ;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+        
+}
+
+@font-face {
+    font-family: "SanFranciscoLight";        
+    font-weight: normal;
+    src: url("/fonts/SFNSDisplay-Light.ttf") format("truetype");
+}
+
+
+.container-fluid {    
+    background-color: #fad3b6;    
+    height: 100vh;
+    position: fixed;
+    overflow: scroll;
+    
+}
+
+.container-black {
+    position: relative;
+    background-color: #1C1C1C;
+    height: 73vh;
+    width: 44vh;
+    min-height: 400px !important;
+    min-width: 241px;
+    margin: auto;
+    margin-top: 15vh;
+    border-radius: 4vh;
+    color: #f9f9f9;
+    font-family: SanFranciscoLight; 
+}
+
+.display {
+    border-radius: 5vh;
+    border: 2px solid #505050;
+    height: 16vh;
+    margin-top: 3vh;
+    min-height: 90px !important;
+}
+
+.display-text-secondary {
+    font-size: 3vh;
+    text-align: right;
+    letter-spacing: 1.5px;
+    height: 4vh;
+}
+
+.display2{
+    
+    position: relative;
+}
+
+.display-text-primary {
+    position: relative;
+    font-size: 6vh;
+    text-align: right;
+    letter-spacing: 1.5px;
+}
+.buttons {
+    border-radius: 5vh;
+    border: 2px solid #505050;
+    height: 49vh;
+    min-height: 272px !important;
+    margin-top: 2vh;
+    font-size: 5vh;
+    cursor: default;
+}
+.cut {
+    background-color: #D4D4D2;
+    text-align: center;
+    color: #1C1C1C;
+    border-radius: 60px;
+    min-height: 47px !important;
+    min-width: 148px !important;
+    max-width: 26.8vh !important;
+    margin-right: 2%;  
+    font-weight: bolder;
+}
+.operators {
+    text-align: center;
+    background-color: #FF9500;
+    border-radius: 60px;
+    height: 8.1vh;
+    width: 8.1vh;
+    min-height: 47px !important;
+    min-width: 47px !important;
+    max-width: 8.4vh !important; 
+}
+.square:before{
+	content: "";
+	display: block;
+	padding-top: 100%; 	/* initial ratio of 1:1*/
+}
+.numbers {
+    text-align: center;
+    background-color: #505050;
+    border-radius: 60px;
+    height: 8.1vh;
+    width: 8.1vh;
+    height: 8.1vh;
+    width: 8.1vh;
+    min-height: 47px !important;
+    min-width: 47px !important;
+    max-width: 8.4vh !important;
+    margin-right: 2%;  
+}
+
+.numbers1 {
+    text-align: center;
+    background-color: #505050;
+    border-radius: 60px;    
+    height: 8.1vh;
+    width: 8.1vh;
+    min-height: 47px !important;
+    min-width: 100px !important;
+    max-width: 17.8vh !important;
+    margin-right: 2%;
+
+}
+
+.mtt-3 {
+    margin-top: 1.5vh;
+}
+.mtt-2 {
+    margin-top: 1.2vh;
+}
+.mxx-1 {
+    margin-left: .7vh !important;
+    margin-right: .7vh !important;
+}
+
+@media screen and (max-height: 550px) {
+    .buttons {
+        font-size: 30px;
+    }
+    .display-text-secondary {
+        font-size: 17px;
+    }
+    .display-text-primary {
+        font-size: 33px;
+    }
+    .mtt-3 {
+        margin-top: 10px;
+    }
+    .mtt-2 {
+        margin-top: 5px;
+    }
+}

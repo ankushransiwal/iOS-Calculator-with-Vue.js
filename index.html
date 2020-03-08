@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+  
+
+  <title>Calculator</title>
+</head>
+
+<body>
+  <div class="calculator">
+    <div class="container-fluid">
+      <div class="container-black">
+        <div class="row no-gutters justify-content-center mxx-1">
+          <div class="col-11 display">
+            <div class="row justify-content-center mtt-2 display1">
+              <div class="col-10 display-text-secondary" v-model="secondaryText">
+                {{ secondaryText }}
+              </div>
+            </div>
+            <div class="row justify-content-center display2">
+              <div class="col-10 display-text-primary" v-model="primaryText">
+                {{ primaryText }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters justify-content-center mxx-1">
+          <div class="col-11 buttons">
+            <div class="row justify-content-center mxx-1 mtt-3">
+              <div v-on:click="buttonSelect($event)" class="col-9 cut" id="cut">C</div>
+              <div class="col-3 operators" v-on:click="buttonSelect($event)" id="÷">÷</div>
+            </div>
+            <div class="row justify-content-center mxx-1 mtt-2">
+              <div class="col-3 numbers" v-on:click="buttonSelect($event)" id="7">7</div>
+              <div class="col-3 numbers" v-on:click="buttonSelect($event)" id="8">8</div>
+              <div class="col-3 numbers" v-on:click="buttonSelect($event)" id="9">9</div>
+              <div class="col-3 operators" v-on:click="buttonSelect($event)" id="×">×</div>
+            </div>
+            <div class="row justify-content-center mxx-1 mtt-2">
+              <div class="col-3 numbers" v-on:click="buttonSelect($event)" id="4">4</div>
+              <div class="col-3 numbers" v-on:click="buttonSelect($event)" id="5">5</div>
+              <div class="col-3 numbers" v-on:click="buttonSelect($event)" id="6">6</div>
+              <div class="col-3 operators" v-on:click="buttonSelect($event)" id="-">-</div>
+            </div>
+            <div class="row justify-content-center mxx-1 mtt-2">
+              <div class="col-3 numbers" v-on:click="buttonSelect($event)" id="1">1</div>
+              <div class="col-3 numbers" v-on:click="buttonSelect($event)" id="2">2</div>
+              <div class="col-3 numbers" v-on:click="buttonSelect($event)" id="3">3</div>
+              <div class="col-3 operators" v-on:click="buttonSelect($event)" id="+">+</div>
+            </div>
+            <div class="row justify-content-center mxx-1 mtt-2">
+              <div class="col-6 numbers1" v-on:click="buttonSelect($event)" id="0">0</div>
+              <div class="col-3 numbers" v-on:click="buttonSelect($event)" id="decimal">.</div>
+              <div class="col-3 operators" v-on:click="buttonSelect($event)" id="equals">=</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<script>
+//   new Vue ({
+//     el : '#calculator',    
+//     methods : {
+//         buttonSel : function () {
+//             alert("hello");
+//             console.log(1)            
+//         },
+//         buttonSelect : function (elem) {
+//             alert("hello" + elem.id);
+//             console.log(1)            
+//         },
+//     }
+    
+// });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+
+</html>
