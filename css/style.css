@@ -16,6 +16,11 @@ html, body {
     font-weight: normal;
     src: url("../fonts/SFNSDisplay-Light.ttf") format("truetype");
 }
+@font-face {
+    font-family: "SanFrancisco";        
+    font-weight: bolder;
+    src: url("../fonts/SFNSDisplay-Regular.ttf") format("truetype");
+}
 
 
 .container-fluid {    
@@ -77,6 +82,7 @@ html, body {
     cursor: default;
 }
 .cut {
+    font-family: SanFrancisco;
     background-color: #D4D4D2;
     text-align: center;
     color: #1C1C1C;
