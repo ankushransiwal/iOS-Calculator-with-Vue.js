@@ -14,7 +14,7 @@ html, body {
 @font-face {
     font-family: "SanFranciscoLight";        
     font-weight: normal;
-    src: url("/fonts/SFNSDisplay-Light.ttf") format("truetype");
+    src: url("./css/fonts/SFNSDisplay-Light.ttf") format("truetype");
 }
 
 
@@ -37,7 +37,9 @@ html, body {
     margin-top: 15vh;
     border-radius: 4vh;
     color: #f9f9f9;
-    font-family: SanFranciscoLight; 
+    font-family: SanFranciscoLight;
+    /* font-family: 'Roboto', sans-serif;
+    font-weight: 300; */
 }
 
 .display {
