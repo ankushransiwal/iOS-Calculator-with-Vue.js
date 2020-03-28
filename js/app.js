@@ -44,7 +44,7 @@ var calc = new Vue ({
         continueCalc : function (buttonId) {
             var vmObj = this;
             if ( buttonId == '0' || buttonId == '1' || buttonId == '2' || buttonId == '3' || buttonId == '4' || buttonId == '5' ||
-            buttonId == '6' || buttonId == '7' || buttonId == '8' || buttonId == '9') {
+            buttonId == '6' || buttonId == '7' || buttonId == '8' || buttonId == '9' || buttonId == '.') {
                 if (buttonId == '0' && !vmObj.isSecondNumSelected) {
                     return;
                 }
@@ -79,7 +79,7 @@ var calc = new Vue ({
                 }
                 else {
                     vmObj.currentOperator = buttonId;
-                    vmObj.firstNum = parseInt(vmObj.primaryText);
+                    vmObj.firstNum = parseFloat(vmObj.primaryText);
                     // if(vmObj.isOperated){
                     //     pa
                     // }
@@ -110,7 +110,7 @@ var calc = new Vue ({
 
         operate : function () {
             vmObj = this;
-            vmObj.secondNum = parseInt(vmObj.primaryText);
+            vmObj.secondNum = parseFloat(vmObj.primaryText);
             switch (vmObj.currentOperator) {
                 case '+' :
                     vmObj.result = vmObj.result + vmObj.secondNum;
@@ -136,6 +136,7 @@ var calc = new Vue ({
 
         clearAll : function () {
 
+            // Resetting all the values to default
             Object.assign(this.$data, this.$options.data.call(this));
             // var vmObj = this;
             // vmObj.primaryText = '0';
