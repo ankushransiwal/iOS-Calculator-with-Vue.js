@@ -49,7 +49,7 @@ html, body {
     min-height: 400px !important;
     min-width: 241px;
     margin: auto;
-    margin-top: 7vh;
+    margin-top: 4vh;
     border-radius: 4vh;
     color: var(--text-color);
     font-family: SanFranciscoLight;
@@ -178,10 +178,10 @@ html, body {
     font-family: 'Rubik', sans-serif;
 	font-size: 2vh;
     line-height: 1.5;
-    
 	display: flex;
 	align-items: center;
-	justify-content: center;
+    justify-content: center;
+    margin-bottom: 2vh;
 }
  button {
 	 position: relative;
