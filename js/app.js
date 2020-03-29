@@ -105,6 +105,7 @@ var calc = new Vue ({
             buttonId == '6' || buttonId == '7' || buttonId == '8' || buttonId == '9' || buttonId == '.') {
                     vmObj.freshstart = false;
                     vmObj.primaryText = buttonId;
+                    vmObj.isSecondNumSelected = true;
             }
             if (buttonId == '-') {
                 vmObj.activeSign = "-";
