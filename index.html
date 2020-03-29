@@ -17,12 +17,12 @@
 
 <body>
   <div class="calculator">
-    <div class="container-fluid">
+    <div class="container-fluid" v-bind:style="bgc">
       <div class="container-black">
         <div class="row no-gutters justify-content-center mxx-1">
-          <div class="col-11 display">
+          <div class="col-11 display" v-bind:style="bord">
             <div class="row justify-content-center mtt-2 display1">
-              <div class="col-10 display-text-secondary" v-model="secondaryText">
+              <div class="col-10 display-text-secondary" id="display-text-secondary" v-model="secondaryText">
                 {{ secondaryText }}
               </div>
             </div>
@@ -66,8 +66,29 @@
         </div>
       </div>
 
-    </div>
+      <!-- <div class="themes">
+        <div id="palette1" class="palette" v-on:click="changeTheme($event)">
+          <div id="p1c1" class="p1c"></div>
+          <div id="p1c2" class="p1c"></div>
+          <div id="p1c3" class="p1c"></div>
+        </div>
+        <div id="palette2" class="palette" v-on:click="changeTheme($event)">
+          <div id="p2c1" class="p1c"></div>
+          <div id="p2c2" class="p1c"></div>
+          <div id="p2c3" class="p1c"></div>
+        </div>
+        <div id="palette3" class="palette" v-on:click="changeTheme($event)">
+          <div id="p3c1" class="p1c"></div>
+          <div id="p3c2" class="p1c"></div>
+          <div id="p3c3" class="p1c"></div>
+        </div>
+      </div> -->
+      <div class="themes">
+        <button class="learn-more" v-on:click="changeTheme">Change Colors</button>
+      </div>
+      
   </div>
+</div>
 <script>
 //   new Vue ({
 //     el : '#calculator',    
