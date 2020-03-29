@@ -206,8 +206,10 @@ button.learn-more:focus {
 	 background: var(--btn-color);
 	 border: 2px solid var(--body-color);
 	 border-radius: 0.75em;
-	 transform-style: preserve-3d;
-	 transition: transform 100ms cubic-bezier(0, 0, 0.58, 1), background 100ms cubic-bezier(0, 0, 0.58, 1);
+     transform-style: preserve-3d;
+     -webkit-transform-style: preserve-3d;
+     transition: transform 100ms cubic-bezier(0, 0, 0.58, 1), background 100ms cubic-bezier(0, 0, 0.58, 1);
+     -webkit-transition: transform 100ms cubic-bezier(0, 0, 0.58, 1), background 100ms cubic-bezier(0, 0, 0.58, 1);
 }
  button.learn-more::before {
 	 position: absolute;
@@ -219,25 +221,31 @@ button.learn-more:focus {
 	 right: 0;
 	 bottom: 0;
 	 background: var(--btn2-color);
-	 border-radius: inherit;
-	 box-shadow: 0 0 0 2px var(--body-color), 0 0.625em 0 0 var(--btn-color);
-	 transform: translate3d(0, 0.75em, -1em);
+     border-radius: inherit;
+     box-shadow: 0 0 0 2px var(--body-color), 0 0.625em 0 0 var(--btn-color);
+     -webkit-transform: translate3d(0, 0.75em, -1em);
+     transform: translate3d(0, 0.75em, -1em);
+     -webkit-transition: transform 100ms cubic-bezier(0, 0, 0.58, 1), box-shadow 100ms cubic-bezier(0, 0, 0.58, 1);
 	 transition: transform 100ms cubic-bezier(0, 0, 0.58, 1), box-shadow 100ms cubic-bezier(0, 0, 0.58, 1);
 }
  button.learn-more:hover {
-	 background: var(--body-color);
+     background: var(--body-color);
+     -webkit-transform: translate(0, 0.25em);
 	 transform: translate(0, 0.25em);
 }
  button.learn-more:hover::before {
-	 box-shadow: 0 0 0 2px var(--body-color), 0 0.5em 0 0 var(--btn-color);
+     box-shadow: 0 0 0 2px var(--body-color), 0 0.5em 0 0 var(--btn-color);
+     -webkit-transform: translate3d(0, 0.5em, -1em);
 	 transform: translate3d(0, 0.5em, -1em);
 }
  button.learn-more:active {
-	 background: var(--btn-color);
+     background: var(--btn-color);
+     -webkit-transform: translate(0em, 0.75em);
 	 transform: translate(0em, 0.75em);
 }
  button.learn-more:active::before {
-	 box-shadow: 0 0 0 2px var(--btn-color), 0 0 var(--btn2-color);
+     box-shadow: 0 0 0 2px var(--btn-color), 0 0 var(--btn2-color);
+     -webkit-transform: translate3d(0, 0, -1em);
 	 transform: translate3d(0, 0, -1em);
 }
  
