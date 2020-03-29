@@ -2,6 +2,7 @@ var calc = new Vue ({
     el : '.calculator',
     data : () => ({
         freshstart : true,
+        firstTime : true,
         primaryText : '0',
         secondaryText : '',
         prevOperator : '',
@@ -105,7 +106,6 @@ var calc = new Vue ({
             buttonId == '6' || buttonId == '7' || buttonId == '8' || buttonId == '9' || buttonId == '.') {
                     vmObj.freshstart = false;
                     vmObj.primaryText = buttonId;
-                    vmObj.isSecondNumSelected = true;
             }
             if (buttonId == '-') {
                 vmObj.activeSign = "-";
@@ -125,8 +125,15 @@ var calc = new Vue ({
             }
             if ( buttonId == '0' || buttonId == '1' || buttonId == '2' || buttonId == '3' || buttonId == '4' || buttonId == '5' ||
             buttonId == '6' || buttonId == '7' || buttonId == '8' || buttonId == '9' || buttonId == '.') {
+                if (vmObj.firstTime) {
+                    vmObj.isSecondNumSelected = true;
+                }
                 if (buttonId == '0' && !vmObj.isSecondNumSelected) {
                     return;
+                }
+                if(vmObj.firstTime) {
+                    vmObj.firstTime = false;
+                    vmObj.isSecondNumSelected = false;
                 }
                 if (vmObj.operatorCounter > 0 && !vmObj.isSecondNumSelected) {
                     vmObj.primaryText = '';
@@ -150,6 +157,9 @@ var calc = new Vue ({
             }
             else if (buttonId == '×' || buttonId == '÷' || buttonId == '+' || buttonId == '-') {
                 
+                if(vmObj.firstTime) {
+                    vmObj.firstTime = false;
+                }
                 vmObj.operatorCounter += 1;
                 if (vmObj.isSecondNumSelected){
                     vmObj.operate();
