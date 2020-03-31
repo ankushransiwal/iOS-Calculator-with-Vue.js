@@ -7,8 +7,26 @@
     --btn2-color: #D4D4D2;
     --btn3-color: #FF9500;
     --text-color: #f9f9f9;
+    /* Keyword values */
+
+
 }
 html, body {
+    touch-action: auto;
+    touch-action: none;
+    touch-action: pan-x;
+    touch-action: pan-left;
+    touch-action: pan-right;
+    touch-action: pan-y;
+    touch-action: pan-up;
+    touch-action: pan-down;
+    touch-action: pinch-zoom;
+    touch-action: manipulation;
+
+    /* Global values */
+    touch-action: inherit;
+    touch-action: initial;
+    touch-action: unset;
     margin: 0 ;
     padding: 0 ;
     -webkit-touch-callout: none; /* iOS Safari */
