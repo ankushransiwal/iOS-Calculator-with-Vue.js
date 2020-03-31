@@ -18,6 +18,7 @@ var calc = new Vue ({
         isOverFlow : false,
         toAdd : '',
         random : 1,
+        isDecimal : false,
     }),    
     methods : {
         changeTheme : function (event) {
@@ -106,6 +107,9 @@ var calc = new Vue ({
             buttonId == '6' || buttonId == '7' || buttonId == '8' || buttonId == '9' || buttonId == '.') {
                     vmObj.freshstart = false;
                     vmObj.primaryText = buttonId;
+                    if (buttonId == '.'){
+                        vmObj.isDecimal = true;
+                    }
             }
             if (buttonId == '-') {
                 vmObj.activeSign = "-";
@@ -131,6 +135,12 @@ var calc = new Vue ({
                 if (buttonId == '0' && !vmObj.isSecondNumSelected) {
                     return;
                 }
+                if (buttonId == '.'){
+                    if (vmObj.isDecimal) {
+                        return;
+                    }
+                    vmObj.isDecimal = true;
+                }
                 
                 if (vmObj.operatorCounter > 0 && !vmObj.isSecondNumSelected) {
                     vmObj.primaryText = '';
@@ -149,11 +159,12 @@ var calc = new Vue ({
                 if (!vmObj.isOperated){
                     vmObj.operate();
                 }
+                vmObj.isDecimal = false;
                 
                 vmObj.operatorCounter = 0;
             }
             else if (buttonId == '×' || buttonId == '÷' || buttonId == '+' || buttonId == '-') {
-                
+                vmObj.isDecimal = false;
                 if(vmObj.firstTime) {
                     vmObj.firstTime = false;
                     vmObj.isSecondNumSelected = false;
