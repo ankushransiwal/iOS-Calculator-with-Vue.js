@@ -131,10 +131,7 @@ var calc = new Vue ({
                 if (buttonId == '0' && !vmObj.isSecondNumSelected) {
                     return;
                 }
-                if(vmObj.firstTime) {
-                    vmObj.firstTime = false;
-                    vmObj.isSecondNumSelected = false;
-                }
+                
                 if (vmObj.operatorCounter > 0 && !vmObj.isSecondNumSelected) {
                     vmObj.primaryText = '';
                     vmObj.isSecondNumSelected = true;
@@ -159,6 +156,7 @@ var calc = new Vue ({
                 
                 if(vmObj.firstTime) {
                     vmObj.firstTime = false;
+                    vmObj.isSecondNumSelected = false;
                 }
                 vmObj.operatorCounter += 1;
                 if (vmObj.isSecondNumSelected){

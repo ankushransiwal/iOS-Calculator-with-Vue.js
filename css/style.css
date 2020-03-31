@@ -228,7 +228,7 @@ button.learn-more:focus {
      -webkit-transition: transform 100ms cubic-bezier(0, 0, 0.58, 1), box-shadow 100ms cubic-bezier(0, 0, 0.58, 1);
 	 transition: transform 100ms cubic-bezier(0, 0, 0.58, 1), box-shadow 100ms cubic-bezier(0, 0, 0.58, 1);
 }
- button.learn-more:hover {
+ /* button.learn-more:hover {
      background: var(--body-color);
      -webkit-transform: translate(0, 0.25em);
 	 transform: translate(0, 0.25em);
@@ -237,14 +237,14 @@ button.learn-more:focus {
      box-shadow: 0 0 0 2px var(--body-color), 0 0.5em 0 0 var(--btn-color);
      -webkit-transform: translate3d(0, 0.5em, -1em);
 	 transform: translate3d(0, 0.5em, -1em);
-}
+} */
  button.learn-more:active {
-     background: var(--btn-color);
+     background: var(--body-color);
      -webkit-transform: translate(0em, 0.75em);
 	 transform: translate(0em, 0.75em);
 }
  button.learn-more:active::before {
-     box-shadow: 0 0 0 2px var(--btn-color), 0 0 var(--btn2-color);
+     box-shadow: 0 0 0 2px var(--body-color), 0 0 var(--btn-color);
      -webkit-transform: translate3d(0, 0, -1em);
 	 transform: translate3d(0, 0, -1em);
 }
